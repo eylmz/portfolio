@@ -1,0 +1,22 @@
+.social-media{
+    list-style: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+    display: flex;
+}
+
+.social-media li{
+    margin-right: 10px
+}
+
+.social-media li a{
+    display: flex;
+    height: 35px;
+    width: 35px;
+    justify-content: center;
+    align-items: center;
+    background: #bc3c75;
+    color: #fff;
+    border-radius: 100%;
+    font-size: 18px;
+}

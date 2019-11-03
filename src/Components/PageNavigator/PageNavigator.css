@@ -1,0 +1,17 @@
+#page-navigator{
+    height: 250px;
+    overflow: hidden;
+}
+
+#page-navigator > article{
+    animation: opacity 500ms;
+    height: 250px;
+    padding: 15px 40px;
+    box-sizing: border-box;
+}
+
+@keyframes opacity {
+    from { opacity: 0 }
+    to { opacity: 1}
+}
+

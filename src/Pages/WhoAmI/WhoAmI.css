@@ -1,0 +1,64 @@
+#who-am-i{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#who-am-i .image img{
+    flex: 1 1;
+    height: 180px;
+    border-radius: 100%;
+    border: 5px solid #bc3c75;
+}
+
+#who-am-i .info{
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#who-am-i .contact-info{
+    flex: 1 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#who-am-i .contact-info ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    color: #444;
+}
+
+#who-am-i .contact-info ul li{
+    margin-bottom: 10px;
+    font-size:16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+
+#who-am-i .contact-info ul li svg{
+    color: #bc3c75;
+    font-size: 20px;
+    margin-left: 10px
+}
+
+#who-am-i .info span{
+    color: #444;
+    font-size: 40px;
+}
+
+
+#who-am-i .info span.primary strong {
+    font-weight: 500;
+}
+
+#who-am-i .info span.primary, #who-am-i .info span.primary *{
+    color: #bc3c75;
+}
