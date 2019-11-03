@@ -1,6 +1,6 @@
 import * as React from 'react';
-import './Resume.css';
 import Slider from 'react-slick';
+import './Resume.less';
 
 export class Resume extends React.Component{
   state = {

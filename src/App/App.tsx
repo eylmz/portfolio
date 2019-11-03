@@ -1,15 +1,15 @@
-import React from 'react';
-import './App.css';
+import * as React from 'react';
+import { FaBriefcase } from 'react-icons/fa'
+import { GoMortarBoard, GoPerson } from 'react-icons/go'
+import { MdEmail, MdMultilineChart } from 'react-icons/md'
 import '../Assets/Styles/ReactSlick.css'
-import {WhoAmI} from "../Pages/WhoAmI/WhoAmI";
-import {Contact} from "../Pages/Contact/Contact";
-import {Header} from "../Components/Header/Header";
-import {PageNavigator} from "../Components/PageNavigator/PageNavigator";
-import {Navigation} from "../Components/Navigation/Navigation";
-import {GoPerson, GoMortarBoard} from 'react-icons/go'
-import {FaBriefcase} from 'react-icons/fa'
-import {MdEmail, MdMultilineChart} from 'react-icons/md'
-import {Resume} from "../Pages/Resume/Resume";
+import { Header } from '../Components/Header/Header';
+import { Navigation } from '../Components/Navigation/Navigation';
+import { PageNavigator } from '../Components/PageNavigator/PageNavigator';
+import { Contact } from '../Pages/Contact/Contact';
+import { Resume } from '../Pages/Resume/Resume';
+import { WhoAmI } from '../Pages/WhoAmI/WhoAmI';
+import './App.less';
 
 export class App extends React.Component {
   state = {
@@ -38,13 +38,13 @@ export class App extends React.Component {
     ]
   };
 
-  constructor(props){
+  constructor(props: any) {
     super(props);
 
     this.changePage = this.changePage.bind(this);
   }
 
-  changePage(index) {
+  changePage(index: number) {
     this.setState({
       activePage: index
     });

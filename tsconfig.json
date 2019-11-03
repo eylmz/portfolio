@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "lib": ["es5", "es6", "es2015", "dom"],
+    "skipLibCheck": true,
+    "declaration": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "target": "es5",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "noEmitOnError": true,
+    "noImplicitReturns": true,
+    "strictPropertyInitialization": true,
+    "types": ["node"]
+  },
+  "include": ["src"],
+  "exclude": ["./__tests__", "dist", "*/**/__mocks__", "node_modules"]
+}

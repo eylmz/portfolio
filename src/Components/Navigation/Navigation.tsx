@@ -1,14 +1,19 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
-import './Navigation.css';
+import './Navigation.less';
 
-export class Navigation extends React.Component{
-  getPageButtons(){
+export interface NavigationProps {
+  pages: any[];
+  activePage: number;
+  onClick: (arg0: number) => void;
+}
+
+export class Navigation extends React.Component<NavigationProps>{
+  getPageButtons() {
     const { pages, activePage, onClick } = this.props;
     return pages.map((page, index) =>
       <li
         key={index}
-        className={activePage === index ? 'active':null}
+        className={activePage === index ? 'active' : undefined}
         onClick={() => onClick(index)}
       >
         {page.icon}
@@ -26,9 +31,3 @@ export class Navigation extends React.Component{
     )
   }
 }
-
-Navigation.propTypes = {
-  pages: PropTypes.array,
-  activePage: PropTypes.number,
-  onClick: PropTypes.func
-};

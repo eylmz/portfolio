@@ -1,0 +1,70 @@
+#resume{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  h2{
+    margin: 0 0 20px 0;
+    font-weight: 600;
+  }
+
+  .employment {
+    flex: 2 1;
+    width: 466px;
+    height: 200px;
+    border-right: 1px solid #cacaca;
+    padding-right: 20px;
+
+    .employment-slider{
+      .slick-arrow{
+        top: -30px;
+        right: 0;
+        left: auto;
+      }
+
+      .slick-arrow.slick-prev{ right: 30px }
+
+      .employment-slide{
+        height: 150px;
+        display: flex!important;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 15px;
+        justify-content: center;
+        border-bottom: 1px dotted #bc3c75;
+        position: relative;
+
+        .date{
+          color: #666;
+          font-size: 14px;
+        }
+
+        h3 {
+          margin: 0 0 5px 0;
+        }
+
+        h4 {
+          margin: 0 0 5px 0;
+          color: #bc3c75;
+        }
+
+        &:after{
+          content:'';
+          display: block;
+          width: 20px;
+          height: 10px;
+          background: #bc3c75;
+          position: absolute;
+          bottom: 0;
+          left: 25px;
+          margin-left: -10px;
+        }
+      }
+    }
+  }
+
+  .skills {
+    margin-left: 20px;
+    flex: 1 1;
+  }
+}

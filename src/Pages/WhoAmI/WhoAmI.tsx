@@ -1,13 +1,13 @@
 import * as React from 'react';
-import './WhoAmI.css';
-import {MdCake, MdLocationOn, MdPhone, MdEmail} from "react-icons/all";
-import {GoPerson} from "react-icons/go";
-import {SocialMedia} from "../../Components/SocialMedia/SocialMedia";
-import {Typist} from "../../Components/Typist/Typist";
+import { MdCake, MdEmail, MdLocationOn, MdPhone } from 'react-icons/all';
+import { GoPerson } from 'react-icons/go';
+import { SocialMedia } from '../../Components/SocialMedia/SocialMedia';
+import { Typist } from '../../Components/Typist/Typist';
+import './WhoAmI.less';
 
 export class WhoAmI extends React.Component{
   state = {
-    words: "developer",
+    words: 'developer',
   };
 
   render() {

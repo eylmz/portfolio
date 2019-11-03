@@ -1,15 +1,25 @@
 import * as React from 'react';
 import ReactTypist from 'react-typist';
-import PropTypes from 'prop-types';
 
-export class Typist extends React.Component{
+export interface TypistProps {
+  interval?: number;
+  words: string[];
+}
+
+export interface TypistStates {
+  index: number;
+  typing: boolean;
+}
+
+export class Typist extends React.Component<TypistProps, TypistStates>{
   state = {
     index: 0,
     typing: true
   };
-  timeout = null;
+  _timeout?: number;
+  _isMounted = false;
 
-  constructor(props){
+  constructor(props: any) {
     super(props);
 
     this.onTypingDone = this.onTypingDone.bind(this);
@@ -22,17 +32,17 @@ export class Typist extends React.Component{
 
   componentWillUnmount() {
     this._isMounted = false;
-    if (this.timeout) {
-      clearTimeout(this.timeout);
+    if (this._timeout) {
+      clearTimeout(this._timeout);
     }
   }
 
   onTypingDone() {
     this.setState({ typing: false });
-    this.timeout = setTimeout(this.showNext, this.props.interval || 500);
+    this._timeout = window.setTimeout(this.showNext, this.props.interval || 500);
   }
 
-  showNext(){
+  showNext() {
     const { words } = this.props;
     this.setState(oldState => ({
       typing: true,
@@ -50,12 +60,7 @@ export class Typist extends React.Component{
       <ReactTypist onTypingDone={this.onTypingDone}>
         <strong>{word}</strong>
         <ReactTypist.Backspace count={backSpaceCount} delay={500}/>
-      </ReactTypist>: <strong>|</strong>
+      </ReactTypist> : <strong>|</strong>
     );
   }
 }
-
-Typist.propTypes = {
-  words: PropTypes.array.isRequired,
-  timeout: PropTypes.number
-};

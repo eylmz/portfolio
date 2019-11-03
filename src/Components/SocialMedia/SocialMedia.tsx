@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { FiInstagram, FiTwitter, FiGithub } from 'react-icons/fi';
 import { FaLinkedinIn } from 'react-icons/fa';
+import { FiGithub, FiInstagram, FiTwitter } from 'react-icons/fi';
 import { MdEmail } from 'react-icons/md';
-import './SocialMedia.css';
+import './SocialMedia.less';
 
 export class SocialMedia extends React.Component{
   render() {
