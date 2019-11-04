@@ -3,22 +3,17 @@ import { MdCake, MdEmail, MdLocationOn, MdPhone } from 'react-icons/all';
 import { GoPerson } from 'react-icons/go';
 import { SocialMedia } from '../../Components/SocialMedia/SocialMedia';
 import { Typist } from '../../Components/Typist/Typist';
+import { PERSONAL_INFO, TYPING_WORDS } from '../../Config/Config';
 import './WhoAmI.less';
 
 export class WhoAmI extends React.Component{
-  state = {
-    words: 'developer',
-  };
-
   render() {
-    const { words } = this.state;
-
     return (
       <article id="who-am-i">
         <div className="info">
           <span>I'm a</span>
           <span className="primary">
-            { Array.isArray(words) ? <Typist words={words} /> : <strong>{words}</strong> }
+            { Array.isArray(TYPING_WORDS) ? <Typist words={TYPING_WORDS} /> : <strong>{TYPING_WORDS}</strong> }
           </span>
 
           <SocialMedia/>
@@ -30,11 +25,11 @@ export class WhoAmI extends React.Component{
 
         <div className="contact-info">
           <ul>
-            <li><span>Emre YILMAZ </span><GoPerson/></li>
-            <li><span>June 01, 1996 </span><MdCake/></li>
-            <li><span>Turkey, Istanbul </span><MdLocationOn/></li>
-            <li><span><a href="tel: 00905464721382">+90 546 472 13 82</a></span><MdPhone/></li>
-            <li><span><a href="mailto: eylmz058@gmail.com">eylmz058@gmail.com</a></span><MdEmail/></li>
+            <li><span>{PERSONAL_INFO.fullName}</span><GoPerson/></li>
+            <li><span>{PERSONAL_INFO.birthday}</span><MdCake/></li>
+            <li><span>{PERSONAL_INFO.location}</span><MdLocationOn/></li>
+            <li><span><a href={`tel: ${PERSONAL_INFO.telephone}`}>{PERSONAL_INFO.telephone}</a></span><MdPhone/></li>
+            <li><span><a href={`mailto: ${PERSONAL_INFO.email}`}>{PERSONAL_INFO.email}</a></span><MdEmail/></li>
           </ul>
         </div>
       </article>

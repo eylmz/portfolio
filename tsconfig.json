@@ -19,5 +19,5 @@
     "types": ["node"]
   },
   "include": ["src"],
-  "exclude": ["./__tests__", "dist", "*/**/__mocks__", "node_modules"]
+  "exclude": ["dist", "node_modules"]
 }

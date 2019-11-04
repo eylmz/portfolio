@@ -6,14 +6,23 @@ import '../Assets/Styles/ReactSlick.css'
 import { Header } from '../Components/Header/Header';
 import { Navigation } from '../Components/Navigation/Navigation';
 import { PageNavigator } from '../Components/PageNavigator/PageNavigator';
+import { ACTIVE_PAGE_INDEX } from '../Config/Config';
 import { Contact } from '../Pages/Contact/Contact';
 import { Resume } from '../Pages/Resume/Resume';
 import { WhoAmI } from '../Pages/WhoAmI/WhoAmI';
+import { Page } from '../types';
 import './App.less';
 
-export class App extends React.Component {
+export interface AppStates {
+  activePage: number;
+  pages: Page[];
+}
+
+export interface AppProps {}
+
+export class App extends React.Component<AppProps, AppStates> {
   state = {
-    activePage: 0,
+    activePage: ACTIVE_PAGE_INDEX,
     pages: [
       {
         icon: <MdMultilineChart/>,
@@ -38,7 +47,7 @@ export class App extends React.Component {
     ]
   };
 
-  constructor(props: any) {
+  constructor(props: AppProps) {
     super(props);
 
     this.changePage = this.changePage.bind(this);

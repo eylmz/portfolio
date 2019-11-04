@@ -1,8 +1,9 @@
 import * as React from 'react';
+import { Page } from '../../types';
 import './PageNavigator.less';
 
 export interface PageNavigatorProps {
-  pages: any[];
+  pages: Page[];
   activePage: number;
 }
 
