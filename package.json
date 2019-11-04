@@ -9,10 +9,12 @@
     "lint": "tslint -c tslint.json --project tsconfig.json \"src/**/*\""
   },
   "dependencies": {
+    "@types/react-star-rating-component": "^1.4.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-icons": "^3.8.0",
     "react-slick": "^0.25.2",
+    "react-star-rating-component": "^1.4.1",
     "react-typist": "^2.0.5"
   },
   "devDependencies": {

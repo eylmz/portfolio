@@ -1,4 +1,4 @@
-#resume{
+#education {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -8,12 +8,13 @@
     font-weight: 600;
   }
 
-  .employment {
-    flex: 1 1;
-    width: 720px;
+  .education {
+    flex: 2 1;
     height: 200px;
+    border-right: 1px solid #cacaca;
+    padding-right: 20px;
 
-    .employment-slider{
+    .education-slider {
       .slick-arrow{
         top: -35px;
         right: 0;
@@ -22,7 +23,7 @@
 
       .slick-arrow.slick-prev{ right: 30px }
 
-      .employment-slide{
+      .education-slide{
         height: 150px;
         display: flex!important;
         flex-direction: column;
@@ -43,6 +44,7 @@
 
         h4 {
           margin: 0 0 5px 0;
+          font-size: 15px;
           color: #bc3c75;
         }
 
@@ -56,6 +58,34 @@
           bottom: 0;
           left: 25px;
           margin-left: -10px;
+        }
+      }
+    }
+  }
+
+  .skills {
+    margin-left: 20px;
+    flex: 1 1;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      height: 150px;
+      overflow-x: auto;
+
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .dv-star-rating-star {
+          font-size: 22px;
+          color: #444 !important;
+        }
+
+        .dv-star-rating-full-star {
+          color: #bc3c75 !important;
         }
       }
     }

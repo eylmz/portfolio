@@ -1,4 +1,4 @@
-import { Employment } from '../types';
+import {Education, Employment, Skill} from '../types';
 
 export const ACTIVE_PAGE_INDEX = 2;
 export const TYPING_WORDS: string|string[] = 'developer';
@@ -21,36 +21,58 @@ export const EMPLOYMENTS: Employment[] = [
     date: 'February 2019 - Currently',
     position: 'Associate Developer',
     company: 'Trendyol Group',
-    city: 'Turkey, Istanbul'
+    location: 'Turkey, Istanbul'
   },
   {
     date: 'July 2018 - January 2019',
     position: 'Full Stack Developer',
     company: 'EKYL Yazılım',
-    city: 'Turkey, Sivas'
+    location: 'Turkey, Sivas'
   },
   {
     date: 'October 2017 - May 2018',
     position: 'Full Stack Developer',
     company: 'Mobileasy',
-    city: 'Turkey, Sivas'
+    location: 'Turkey, Sivas'
   },
   {
     date: 'July 2017 - October 2017',
     position: 'Intern',
     company: 'Havelsan',
-    city: 'Turkey, Ankara'
+    location: 'Turkey, Ankara'
   },
   {
     date: 'July 2016 - July 2017',
     position: 'Full Stack Developer',
     company: 'Mobileasy',
-    city: 'Turkey, Sivas'
+    location: 'Turkey, Sivas'
   },
   {
     date: '2014 - 2016',
     position: 'Back-end Developer',
     company: 'Freelancer',
-    city: 'Turkey'
+    location: 'Turkey'
+  }
+];
+
+export const SKILLS: Skill[] = [
+  {
+    name: 'React',
+    star: 3
+  }
+];
+
+export const EDUCATIONS: Education[] = [
+  {
+    year: '2014 - 2018',
+    department: 'Computer Engineering',
+    school: 'Cumhuriyet University',
+    location: 'Turkey, Sivas'
+  },
+  {
+    year: '2010 - 2014',
+    department: 'Database Programming',
+    school: 'Şarkışla Technical High Sch',
+    location: 'Turkey, Sivas'
   }
 ];

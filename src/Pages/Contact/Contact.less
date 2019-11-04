@@ -1,2 +1,64 @@
 #contact{
+  display: flex;
+  flex-direction: column;
+
+  h2{
+    margin: 0 0 20px 0;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    input, textarea{
+      margin-bottom: 14px;
+      display: flex;
+      flex: 1 1;
+      border: 1px solid #cbcbcb;
+      padding: 10px;
+      border-radius: 3px;
+      resize: none;
+      background: #fbfbfb;
+      font-size: 15px;
+    }
+
+    button{
+      border: none;
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: #bc3c75;
+      cursor: pointer;
+      align-self: flex-end;
+
+      svg {
+        margin-left: 5px;
+      }
+    }
+
+    textarea{
+      height:  auto;
+    }
+
+    .half {
+      margin: 0 -7px;
+      display: flex;
+      justify-content: space-between;
+
+      input {
+        margin-left: 7px;
+        margin-right: 7px;
+      }
+    }
+  }
 }

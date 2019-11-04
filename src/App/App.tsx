@@ -8,6 +8,7 @@ import { Navigation } from '../Components/Navigation/Navigation';
 import { PageNavigator } from '../Components/PageNavigator/PageNavigator';
 import { ACTIVE_PAGE_INDEX } from '../Config/Config';
 import { Contact } from '../Pages/Contact/Contact';
+import { Education } from '../Pages/Education/Education';
 import { Resume } from '../Pages/Resume/Resume';
 import { WhoAmI } from '../Pages/WhoAmI/WhoAmI';
 import { Page } from '../types';
@@ -30,7 +31,7 @@ export class App extends React.Component<AppProps, AppStates> {
       },
       {
         icon: <GoMortarBoard/>,
-        page: <WhoAmI />
+        page: <Education />
       },
       {
         icon: <GoPerson/>,
