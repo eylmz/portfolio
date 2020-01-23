@@ -1,4 +1,4 @@
-import {Education, Employment, Skill} from '../types';
+import { Education, Employment, Portfolio, Skill } from '../types';
 
 export const ACTIVE_PAGE_INDEX = 2;
 export const TYPING_WORDS: string|string[] = 'developer';
@@ -74,5 +74,22 @@ export const EDUCATIONS: Education[] = [
     department: 'Database Programming',
     school: 'Şarkışla Technical High Sch',
     location: 'Turkey, Sivas'
+  }
+];
+export const PORTFOLIO: Portfolio[] = [
+  {
+    name: 'tst',
+    url: 'ts',
+    imageUrl: 'https://i.picsum.photos/id/546/200/200.jpg'
+  },
+  {
+    name: 'tst',
+    url: 'ts',
+    imageUrl: 'https://i.picsum.photos/id/547/200/200.jpg'
+  },
+  {
+    name: 'tst',
+    url: 'ts',
+    imageUrl: 'https://i.picsum.photos/id/501/200/200.jpg'
   }
 ];

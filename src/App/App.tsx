@@ -9,6 +9,7 @@ import { PageNavigator } from '../Components/PageNavigator/PageNavigator';
 import { ACTIVE_PAGE_INDEX } from '../Config/Config';
 import { Contact } from '../Pages/Contact/Contact';
 import { Education } from '../Pages/Education/Education';
+import { Portfolio } from '../Pages/Portfolio/Portfolio';
 import { Resume } from '../Pages/Resume/Resume';
 import { WhoAmI } from '../Pages/WhoAmI/WhoAmI';
 import { Page } from '../types';
@@ -39,7 +40,7 @@ export class App extends React.Component<AppProps, AppStates> {
       },
       {
         icon: <FaBriefcase/>,
-        page: <WhoAmI/>
+        page: <Portfolio/>
       },
       {
         icon: <MdEmail/>,
@@ -64,7 +65,7 @@ export class App extends React.Component<AppProps, AppStates> {
     const { pages, activePage } = this.state;
     return (
       <div id="app">
-        <div id="portfolio">
+        <div id="portfolio-app">
           <Header/>
           <PageNavigator pages={pages} activePage={activePage} />
           <Navigation pages={pages} activePage={activePage} onClick={this.changePage}/>

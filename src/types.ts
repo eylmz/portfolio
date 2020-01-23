@@ -23,3 +23,9 @@ export interface Education {
   school: string;
   location: string;
 }
+
+export interface Portfolio {
+  name: string;
+  url: string;
+  imageUrl: string;
+}
