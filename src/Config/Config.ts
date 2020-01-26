@@ -70,6 +70,12 @@ export const EDUCATIONS: Education[] = [
     location: 'Turkey, Sivas'
   },
   {
+    year: '2014 - 2018',
+    department: 'Computer Engineering',
+    school: 'Cumhuriyet University',
+    location: 'Turkey, Sivas'
+  },
+  {
     year: '2010 - 2014',
     department: 'Database Programming',
     school: 'Şarkışla Technical High Sch',
